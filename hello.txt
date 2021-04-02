@@ -1,3 +1,20 @@
-aaaaaa
-bbbbbb
-cccccc
+messages	List	0	必选	多个消息的集合
+message	bean	1	必选	包含如下字段的bean
+platform	string	2	可选	指定推送消息平台，默认”all”,可选”andriod”或”apns”或者”web”
+ttl	long	2	可选	以毫秒为单位的消息存活时间，0表示不能立即递送的消息会被舍弃，否则默认时间为四个星期
+data	map	2	可选	用于推送数据消息(任何平台都可以解读的字段)，关键字不能为保留字（“ from”，“message_type”或以“ google”或“ gcm”开头的任何字）。
+priority	enum 
+	2	可选	设置信息的优先级，andriod默认值是normal，可选high。APNS默认是10，可选5
+tokens	List	2	必选	用于推送消息的渠道的集合
+token	string	3	必选	用于推送消息的渠道
+topics	List	2	可选	推送消息的主题的集合。
+topic	string	3	可选	推送消息的主题。
+icon	string	2	可选	通知的图标
+color	string	2	可选	设置icon的颜色，andriod是按照 #rrggbb 格式指定的，并且图片必须是 Android 应用的本地可绘制图标资源。
+sound
+String	2	可选	通知提示声音（音频文件的名字）
+direct_boot_ok	boolean	2	可选	仅适用于andriod, 是否发送支持直接启动的消息
+notification	bean	2	必选	包含如下字段的bean，用于推送通知消息
+title	string	3	可选	通知标题，显示给最终用户(任何平台都可以解读的字段) 
+body	string	3	必选	通知内容(任何平台都可以解读的字段)
+image	string	3	可选	包含将要在设备上下载并在通知中显示的图像的URL， JPEG，PNG，BMP跨平台提供全面支持。动画GIF和视频仅适用于iOS。 WebP和HEIF跨平台和平台版本具有不同级别的支持。 Android的图片大小上限为1MB
