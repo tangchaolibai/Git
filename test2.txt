@@ -1,7 +1,1 @@
-code	string	1	必选	推送成功返回值200，失败500
-message_ids	list	1	必选 	返回每条推送消息的唯一ID的集合
-message_id	string	2		消息的唯一ID
-failure_count	Int	1	可选	如果推送给多个token，推送失败的条数
-success_count	Int	1	可选	如果推送给多个token，推送成功的条数
-tokens	list	1	可选	用于推送消息的渠道，如果推送成功tokens的size=0，如果推送全部失败或者部分失败，返回推送失败的token集合
-token	string	2	可选	推送失败的token
+
