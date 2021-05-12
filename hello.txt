@@ -1,13 +1,1 @@
-{    
-     "appId": "104296657",
-    "appSecret": "ad4e10d6ecda55ce7ae0037f036976c4e1ccc8028ded317f12455eba127b4a9e",
-    "topic": "test",
-    "title": "邮件",
-    "body": "您有一封新的邮件",
-    "clickActionType": 3,
-    "useDefaultVibrate": false,
-    "vibrateConfig": [
-        "1S",
-        "8S"
-    ]
-}
+https://github.com/wangyunzhao/auth
